@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:background="#F5F7FA">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Group Announcements"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:textColor="#1A365D"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="16dp">
+
+        <EditText
+            android:id="@+id/announcementInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Type an announcement..."
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:textColorHint="#4A5568"
+            android:inputType="textMultiLine"/>
+
+        <Button
+            android:id="@+id/postAnnouncementButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Post Announcement"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:layout_marginTop="8dp"/>
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/announcementsListView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="16dp"
+        android:background="#FFFFFF"
+        android:padding="8dp"/>
+
+</LinearLayout>

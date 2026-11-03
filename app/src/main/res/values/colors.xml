@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="purple_primary">#7C3AED</color>
+    <color name="purple_dark">#5B21B6</color>
+    <color name="lavender_light">#F3E8FF</color>
+    <color name="lavender_selected">#EDE9FE</color>
+    <color name="bg_light">#F8F9FA</color>
+    <color name="card_bg">#FFFFFF</color>
+    <color name="text_dark">#111827</color>
+    <color name="text_muted">#4B5563</color>
+</resources>

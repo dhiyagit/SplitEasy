@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F5F7FA">
+
+    <ScrollView
+        android:id="@+id/mainScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true"
+        android:clipToPadding="false"
+        android:padding="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SplitEasy Home"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:textColor="#1A365D"/>
+
+            <TextView
+                android:id="@+id/homeWelcomeTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Welcome!"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#2D3748"
+                android:layout_marginTop="8dp"/>
+
+            <!-- Group Selector Spinner -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Select Active Group:"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="#4A5568"
+                android:layout_marginTop="16dp"/>
+
+            <Spinner
+                android:id="@+id/homeGroupSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/rounded_spinner_bg"
+                android:paddingHorizontal="12dp"
+                android:layout_marginTop="6dp"/>
+
+            <!-- 5 Feature Cards -->
+            <Button
+                android:id="@+id/cardAnnouncements"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:text="📢 Group Announcements"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:backgroundTint="#3182CE"
+                android:layout_marginTop="20dp"/>
+
+            <Button
+                android:id="@+id/cardBirthdays"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:text="🎂 Upcoming Birthdays"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:backgroundTint="#D69E2E"
+                android:layout_marginTop="12dp"/>
+
+            <Button
+                android:id="@+id/cardDocuments"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:text="🛒 Shared Shopping List"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:backgroundTint="#805AD5"
+                android:layout_marginTop="12dp"/>
+
+            <Button
+                android:id="@+id/cardSubscriptions"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:text="💳 Subscriptions &amp; Members"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:backgroundTint="#E53E3E"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="24dp"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Bottom Navigation Bar -->
+    <include layout="@layout/layout_bottom_nav"/>
+
+</LinearLayout>

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="28dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SplitEasy"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            android:textColor="#7C3AED" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Create Account"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#1F2937"
+            android:layout_marginTop="8dp" />
+
+        <EditText
+            android:id="@+id/fullName"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Full Name"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#111827"
+            android:textColorHint="#9CA3AF"
+            android:inputType="textPersonName"
+            android:background="@drawable/rounded_edittext"
+            android:paddingHorizontal="16dp"
+            android:layout_marginTop="20dp" />
+
+        <EditText
+            android:id="@+id/registerEmail"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Email Address"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#111827"
+            android:textColorHint="#9CA3AF"
+            android:inputType="textEmailAddress"
+            android:background="@drawable/rounded_edittext"
+            android:paddingHorizontal="16dp"
+            android:layout_marginTop="12dp" />
+
+        <EditText
+            android:id="@+id/registerPhone"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Phone Number (e.g. +91...)"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#111827"
+            android:textColorHint="#9CA3AF"
+            android:inputType="phone"
+            android:background="@drawable/rounded_edittext"
+            android:paddingHorizontal="16dp"
+            android:layout_marginTop="12dp" />
+
+        <EditText
+            android:id="@+id/registerPassword"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Password (at least 8 chars)"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#111827"
+            android:textColorHint="#9CA3AF"
+            android:inputType="textPassword"
+            android:background="@drawable/rounded_edittext"
+            android:paddingHorizontal="16dp"
+            android:layout_marginTop="12dp" />
+
+        <EditText
+            android:id="@+id/confirmPassword"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Confirm Password"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#111827"
+            android:textColorHint="#9CA3AF"
+            android:inputType="textPassword"
+            android:background="@drawable/rounded_edittext"
+            android:paddingHorizontal="16dp"
+            android:layout_marginTop="12dp" />
+
+        <EditText
+            android:id="@+id/registerPin"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="4-Digit App PIN"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#111827"
+            android:textColorHint="#9CA3AF"
+            android:inputType="numberPassword"
+            android:maxLength="4"
+            android:background="@drawable/rounded_edittext"
+            android:paddingHorizontal="16dp"
+            android:layout_marginTop="12dp" />
+
+        <EditText
+            android:id="@+id/confirmPin"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Confirm 4-Digit App PIN"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#111827"
+            android:textColorHint="#9CA3AF"
+            android:inputType="numberPassword"
+            android:maxLength="4"
+            android:background="@drawable/rounded_edittext"
+            android:paddingHorizontal="16dp"
+            android:layout_marginTop="12dp" />
+
+        <Button
+            android:id="@+id/registerButton"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:text="Create Account"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:backgroundTint="#7C3AED"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="24dp" />
+
+        <TextView
+            android:id="@+id/loginLink"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Already have an account? Login"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="#7C3AED"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="24dp" />
+
+    </LinearLayout>
+</ScrollView>

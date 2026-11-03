@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="#F5F7FA">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Record Settlement"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:textColor="#1A365D"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="From (Payer):"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        android:textColor="#2D3748"/>
+
+    <Spinner
+        android:id="@+id/payerSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/rounded_spinner_bg"
+        android:paddingHorizontal="12dp"
+        android:layout_marginTop="8dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="To (Payee):"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp"
+        android:textColor="#2D3748"/>
+
+    <Spinner
+        android:id="@+id/payeeSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/rounded_spinner_bg"
+        android:paddingHorizontal="12dp"
+        android:layout_marginTop="8dp"/>
+
+    <EditText
+        android:id="@+id/payeeUpiInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Payee UPI ID (e.g. name@okaxis)"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:textColorHint="#4A5568"
+        android:inputType="textEmailAddress"
+        android:layout_marginTop="12dp"/>
+
+    <EditText
+        android:id="@+id/amountInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Amount (₹)"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:textColorHint="#4A5568"
+        android:inputType="numberDecimal"
+        android:layout_marginTop="12dp"/>
+
+    <EditText
+        android:id="@+id/descriptionInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Description (Optional)"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:textColorHint="#4A5568"
+        android:inputType="text"
+        android:layout_marginTop="12dp"/>
+
+    <Button
+        android:id="@+id/submitSettlementButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Record Settlement"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"/>
+
+    <Button
+        android:id="@+id/gpayButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Pay with GPay"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:backgroundTint="#2457C5"
+        android:layout_marginTop="12dp"/>
+
+</LinearLayout>

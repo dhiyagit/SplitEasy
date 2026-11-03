@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F5F7FA">
+
+    <ScrollView
+        android:id="@+id/mainScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true"
+        android:clipToPadding="false"
+        android:padding="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🛒 Shared Shopping List"
+                android:textSize="26sp"
+                android:textStyle="bold"
+                android:textColor="#1A365D"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add grocery &amp; shopping items for your group or trip."
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="#4A5568"
+                android:layout_marginTop="6dp"/>
+
+            <!-- Add Item Form -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#FFFFFF"
+                android:padding="16dp"
+                android:layout_marginTop="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Add Shopping Item"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="#2D3748"/>
+
+                <EditText
+                    android:id="@+id/itemNameInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Item Name (e.g. Milk, Eggs)"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textColor="#000000"
+                    android:textColorHint="#4A5568"
+                    android:inputType="text"
+                    android:layout_marginTop="8dp"/>
+
+                <EditText
+                    android:id="@+id/itemQuantityInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Quantity / Notes (e.g. 2 Liters)"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textColor="#000000"
+                    android:textColorHint="#4A5568"
+                    android:inputType="text"
+                    android:layout_marginTop="6dp"/>
+
+                <Button
+                    android:id="@+id/addItemButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Add Item"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="12dp"/>
+            </LinearLayout>
+
+            <!-- Shopping List -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Shopping Items (Tap to toggle status | Click delete to remove)"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="#1A365D"
+                android:layout_marginTop="20dp"/>
+
+            <ListView
+                android:id="@+id/shoppingListView"
+                android:layout_width="match_parent"
+                android:layout_height="280dp"
+                android:layout_marginTop="6dp"
+                android:background="#FFFFFF"
+                android:padding="4dp"
+                android:layout_marginBottom="24dp"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Bottom Navigation Bar -->
+    <include layout="@layout/layout_bottom_nav"/>
+
+</LinearLayout>

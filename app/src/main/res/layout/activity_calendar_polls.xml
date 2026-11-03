@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F5F7FA">
+
+    <ScrollView
+        android:id="@+id/mainScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true"
+        android:clipToPadding="false"
+        android:padding="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="📅 Shared Calendar &amp; Polls"
+                android:textSize="26sp"
+                android:textStyle="bold"
+                android:textColor="#1A365D"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Manage shared group dates and vote on interactive polls."
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="#4A5568"
+                android:layout_marginTop="6dp"/>
+
+            <!-- Add Calendar Entry Form -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#FFFFFF"
+                android:padding="16dp"
+                android:layout_marginTop="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Add Shared Calendar Event"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="#2D3748"/>
+
+                <EditText
+                    android:id="@+id/calendarTitleInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Event / Date Title (e.g. Group Meetup)"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textColor="#000000"
+                    android:textColorHint="#4A5568"
+                    android:inputType="text"
+                    android:layout_marginTop="8dp"/>
+
+                <EditText
+                    android:id="@+id/calendarDateInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Date (YYYY-MM-DD or YYYYMMDD)"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textColor="#000000"
+                    android:textColorHint="#4A5568"
+                    android:inputType="date"
+                    android:layout_marginTop="6dp"/>
+
+                <EditText
+                    android:id="@+id/calendarDescInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Description / Notes"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textColor="#000000"
+                    android:textColorHint="#4A5568"
+                    android:inputType="text"
+                    android:layout_marginTop="6dp"/>
+
+                <Button
+                    android:id="@+id/addCalendarButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Add to Calendar"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="12dp"/>
+            </LinearLayout>
+
+            <!-- Calendar List -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Upcoming Calendar Schedule (Long-press to Delete)"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="#1A365D"
+                android:layout_marginTop="20dp"/>
+
+            <ListView
+                android:id="@+id/calendarListView"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="6dp"
+                android:background="#FFFFFF"
+                android:padding="4dp"/>
+
+            <!-- Create Poll Form -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#FFFFFF"
+                android:padding="16dp"
+                android:layout_marginTop="24dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Create New Poll"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="#2D3748"/>
+
+                <EditText
+                    android:id="@+id/pollQuestionInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Poll Question (e.g. Which date?)"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textColor="#000000"
+                    android:textColorHint="#4A5568"
+                    android:inputType="text"
+                    android:layout_marginTop="8dp"/>
+
+                <EditText
+                    android:id="@+id/pollOpt1Input"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Option 1 (e.g. Saturday)"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textColor="#000000"
+                    android:textColorHint="#4A5568"
+                    android:inputType="text"
+                    android:layout_marginTop="6dp"/>
+
+                <EditText
+                    android:id="@+id/pollOpt2Input"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Option 2 (e.g. Sunday)"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textColor="#000000"
+                    android:textColorHint="#4A5568"
+                    android:inputType="text"
+                    android:layout_marginTop="6dp"/>
+
+                <EditText
+                    android:id="@+id/pollOpt3Input"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Option 3 (Optional)"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textColor="#000000"
+                    android:textColorHint="#4A5568"
+                    android:inputType="text"
+                    android:layout_marginTop="6dp"/>
+
+                <Button
+                    android:id="@+id/createPollButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Create Poll"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="12dp"/>
+            </LinearLayout>
+
+            <!-- Polls List -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Group Polls &amp; Voting (Tap options to vote | Long-press to delete)"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="#1A365D"
+                android:layout_marginTop="20dp"/>
+
+            <ListView
+                android:id="@+id/pollsListView"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_marginTop="6dp"
+                android:background="#FFFFFF"
+                android:padding="4dp"
+                android:layout_marginBottom="24dp"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Bottom Navigation Bar -->
+    <include layout="@layout/layout_bottom_nav"/>
+
+</LinearLayout>

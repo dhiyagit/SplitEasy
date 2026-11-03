@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F5F7FA">
+
+    <ScrollView
+        android:id="@+id/mainScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true"
+        android:clipToPadding="false"
+        android:padding="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SplitEasy Money"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:textColor="#1A365D"/>
+
+            <TextView
+                android:id="@+id/welcomeTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Welcome!"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginTop="12dp"
+                android:textColor="#2D3748"/>
+
+            <!-- Active Group Selector Spinner -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Select Active Group:"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="#4A5568"
+                android:layout_marginTop="16dp"/>
+
+            <Spinner
+                android:id="@+id/moneyGroupSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/rounded_spinner_bg"
+                android:paddingHorizontal="12dp"
+                android:layout_marginTop="6dp"/>
+
+            <!-- Money / Expense Content for Selected Group -->
+            <LinearLayout
+                android:id="@+id/moneyContentLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:layout_marginTop="16dp">
+
+                <!-- Action Buttons for Expense & Settlement -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/addExpenseButton"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Add Expense"
+                        android:textSize="14sp"
+                        android:textStyle="bold"/>
+
+                    <Button
+                        android:id="@+id/recordSettlementButton"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Settle Up"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:layout_marginStart="6dp"/>
+
+                    <Button
+                        android:id="@+id/insightsButton"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Insights"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:layout_marginStart="6dp"/>
+                </LinearLayout>
+
+                <!-- Member Balances -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Member Net Balances"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="18dp"
+                    android:textColor="#2D3748"/>
+
+                <LinearLayout
+                    android:id="@+id/balancesContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="#FFFFFF"
+                    android:padding="8dp"
+                    android:layout_marginTop="4dp"/>
+
+                <!-- Suggested Debts -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Suggested Debts"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="18dp"
+                    android:textColor="#2D3748"/>
+
+                <LinearLayout
+                    android:id="@+id/suggestedDebtsContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="#FFFFFF"
+                    android:padding="8dp"
+                    android:layout_marginTop="4dp"/>
+
+                <!-- Transaction History -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Transaction History"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="18dp"
+                    android:textColor="#2D3748"/>
+
+                <LinearLayout
+                    android:id="@+id/historyContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="#FFFFFF"
+                    android:padding="8dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="16dp"/>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/profileButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="UPI Settings"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp"/>
+
+            <Button
+                android:id="@+id/remindersButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="My Payment Reminders"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"/>
+
+            <Button
+                android:id="@+id/logoutButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Logout"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:backgroundTint="#E53E3E"
+                android:textColor="#FFFFFF"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="24dp"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Bottom Navigation Bar -->
+    <include layout="@layout/layout_bottom_nav"/>
+
+</LinearLayout>

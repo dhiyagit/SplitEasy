@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/bottomNavContainer"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:orientation="horizontal"
+    android:background="#FFFFFF"
+    android:elevation="12dp"
+    android:gravity="center"
+    android:paddingTop="4dp">
+
+    <Button
+        android:id="@+id/navHomeButton"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:text="🏠 Home"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:textColor="#4B5563"
+        android:background="?attr/selectableItemBackground"/>
+
+    <Button
+        android:id="@+id/navCreateGroupButton"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:text="👥 Groups"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:textColor="#4B5563"
+        android:background="?attr/selectableItemBackground"/>
+
+    <Button
+        android:id="@+id/navEventButton"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:text="📅 Event"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:textColor="#4B5563"
+        android:background="?attr/selectableItemBackground"/>
+
+    <Button
+        android:id="@+id/navMoneyButton"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:text="💰 Money"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:textColor="#4B5563"
+        android:background="?attr/selectableItemBackground"/>
+
+</LinearLayout>

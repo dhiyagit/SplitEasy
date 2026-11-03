@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="12dp"
+    android:layout_marginBottom="8dp"
+    android:background="@drawable/bg_card">
+
+    <TextView
+        android:id="@+id/cardNameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Member Name"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="#1A365D"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total Paid"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:textColor="#4A5568"/>
+
+            <TextView
+                android:id="@+id/cardPaidTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="₹0.00"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="#2D3748"
+                android:layout_marginTop="2dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total Share"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:textColor="#4A5568"/>
+
+            <TextView
+                android:id="@+id/cardShareTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="₹0.00"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="#2D3748"
+                android:layout_marginTop="2dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="end">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Net Balance"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:textColor="#4A5568"/>
+
+            <TextView
+                android:id="@+id/cardNetTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Settled"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="#2B6CB0"
+                android:layout_marginTop="2dp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/remindButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Remind"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        android:layout_marginTop="8dp"/>
+
+    <TextView
+        android:id="@+id/reminderStatusTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="13sp"
+        android:textStyle="bold"
+        android:textColor="#2B6CB0"
+        android:visibility="gone"
+        android:gravity="center"
+        android:layout_marginTop="8dp"/>
+
+</LinearLayout>

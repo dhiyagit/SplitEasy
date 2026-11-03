@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F7FA">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Expense"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:textColor="#1A365D"/>
+
+        <Button
+            android:id="@+id/scanReceiptButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="📷 Scan Receipt (OCR)"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="16dp"/>
+
+        <EditText
+            android:id="@+id/titleInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Expense Title (e.g. Dinner, Rent)"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:textColorHint="#4A5568"
+            android:inputType="text"
+            android:layout_marginTop="16dp"/>
+
+        <EditText
+            android:id="@+id/amountInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Amount (₹)"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:textColorHint="#4A5568"
+            android:inputType="numberDecimal"
+            android:layout_marginTop="12dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Category:"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"
+            android:textColor="#2D3748"/>
+
+        <Spinner
+            android:id="@+id/categorySpinner"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/rounded_spinner_bg"
+            android:paddingHorizontal="12dp"
+            android:layout_marginTop="8dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Paid By:"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"
+            android:textColor="#2D3748"/>
+
+        <Spinner
+            android:id="@+id/paidBySpinner"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/rounded_spinner_bg"
+            android:paddingHorizontal="12dp"
+            android:layout_marginTop="8dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Split Method:"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"
+            android:textColor="#2D3748"/>
+
+        <Spinner
+            android:id="@+id/splitMethodSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/rounded_spinner_bg"
+            android:paddingHorizontal="12dp"
+            android:layout_marginTop="8dp"/>
+
+        <!-- Shares Section -->
+        <LinearLayout
+            android:id="@+id/sharesSectionLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:layout_marginTop="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Enter Shares for Each Member:"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="#1A365D"
+                android:layout_marginBottom="8dp"/>
+
+            <LinearLayout
+                android:id="@+id/sharesContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"/>
+        </LinearLayout>
+
+        <!-- Exact Amounts Section -->
+        <LinearLayout
+            android:id="@+id/exactAmountsSectionLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:layout_marginTop="12dp">
+
+            <TextView
+                android:id="@+id/exactRemainingTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Remaining to allocate: ₹0.00"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="#C53030"
+                android:layout_marginBottom="8dp"/>
+
+            <LinearLayout
+                android:id="@+id/exactAmountsContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"/>
+        </LinearLayout>
+
+        <!-- Percentage Section -->
+        <LinearLayout
+            android:id="@+id/percentageSectionLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:layout_marginTop="12dp">
+
+            <TextView
+                android:id="@+id/percentageRemainingTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Remaining percentage: 100.0%"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="#C53030"
+                android:layout_marginBottom="8dp"/>
+
+            <LinearLayout
+                android:id="@+id/percentageContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"/>
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/descriptionInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Description (Optional)"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:textColorHint="#4A5568"
+            android:inputType="text"
+            android:layout_marginTop="16dp"/>
+
+        <Button
+            android:id="@+id/submitExpenseButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Save Expense"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginTop="24dp"/>
+
+    </LinearLayout>
+</ScrollView>

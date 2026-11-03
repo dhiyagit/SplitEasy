@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application
+        android:name=".SplitEasyApplication"
+        android:usesCleartextTraffic="true"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.SplitEasy">
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <activity
+            android:name=".LoginActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".RegisterActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".DashboardActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".MainMenuActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".HomeActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".EventActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".TripPlannerActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".TripItineraryActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".TripBudgetDetailActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".TripBudgetListActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".PartyEventPlannerActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".EventListForGuestsActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".GuestListRsvpActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".CalendarPollsActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".EventFeatureActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".AnnouncementsActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".BirthdaysActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".ShoppingListActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".SubscriptionsActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".CreateGroupActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".GroupDetailActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".AddExpenseActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".RecordSettlementActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".GroupInsightsActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".ProfileActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".RemindersActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".PinLockActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".ForgotPinActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".ChangePinActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+    </application>
+</manifest>

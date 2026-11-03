@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F5F7FA">
+
+    <ScrollView
+        android:id="@+id/mainScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true"
+        android:clipToPadding="false"
+        android:padding="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Events &amp; Trip Planner"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:textColor="#1A365D"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Plan trips, events, budgets and shared schedules."
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#4A5568"
+                android:layout_marginTop="8dp"/>
+
+            <!-- Active Group Selector Spinner -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Select Active Group:"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="#4A5568"
+                android:layout_marginTop="16dp"/>
+
+            <Spinner
+                android:id="@+id/eventGroupSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/rounded_spinner_bg"
+                android:paddingHorizontal="12dp"
+                android:layout_marginTop="6dp"/>
+
+            <!-- 5 Event Feature Cards -->
+            <Button
+                android:id="@+id/cardTripPlanner"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:text="✈️ Trip Planner"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:backgroundTint="#3182CE"
+                android:layout_marginTop="20dp"/>
+
+            <Button
+                android:id="@+id/cardTripBudget"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:text="💰 Trip Budget"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:backgroundTint="#38A169"
+                android:layout_marginTop="12dp"/>
+
+            <Button
+                android:id="@+id/cardPartyPlanner"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:text="🎉 Party &amp; Event Planner"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:backgroundTint="#D69E2E"
+                android:layout_marginTop="12dp"/>
+
+            <Button
+                android:id="@+id/cardGuestList"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:text="📋 Guest List &amp; RSVP"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:backgroundTint="#805AD5"
+                android:layout_marginTop="12dp"/>
+
+            <Button
+                android:id="@+id/cardCalendarPolls"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:text="📅 Shared Calendar &amp; Polls"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:backgroundTint="#E53E3E"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="24dp"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Bottom Navigation Bar -->
+    <include layout="@layout/layout_bottom_nav"/>
+
+</LinearLayout>

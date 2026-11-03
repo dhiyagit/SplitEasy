@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F5F7FA">
+
+    <ScrollView
+        android:id="@+id/mainScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true"
+        android:clipToPadding="false"
+        android:padding="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/eventTitleTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Event Guests &amp; RSVP"
+                android:textSize="26sp"
+                android:textStyle="bold"
+                android:textColor="#1A365D"/>
+
+            <TextView
+                android:id="@+id/rsvpSummaryTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total: 0 | Accepted: 0 | Pending: 0 | Declined: 0"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="#2D3748"
+                android:layout_marginTop="6dp"/>
+
+            <!-- Add Guest Form -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#FFFFFF"
+                android:padding="16dp"
+                android:layout_marginTop="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Add Guest"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="#2D3748"/>
+
+                <EditText
+                    android:id="@+id/guestNameInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Guest Name (e.g. John Doe)"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textColor="#000000"
+                    android:textColorHint="#4A5568"
+                    android:inputType="text"
+                    android:layout_marginTop="8dp"/>
+
+                <EditText
+                    android:id="@+id/guestEmailInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Email (Optional)"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textColor="#000000"
+                    android:textColorHint="#4A5568"
+                    android:inputType="textEmailAddress"
+                    android:layout_marginTop="6dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Initial RSVP Status:"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="#4A5568"
+                    android:layout_marginTop="8dp"/>
+
+                <Spinner
+                    android:id="@+id/rsvpStatusSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/rounded_spinner_bg"
+                    android:paddingHorizontal="12dp"
+                    android:layout_marginTop="4dp"/>
+
+                <Button
+                    android:id="@+id/addGuestButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Add Guest"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="12dp"/>
+            </LinearLayout>
+
+            <!-- Guests List -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Guest List (Tap to update RSVP | Long-press to Remove)"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="#1A365D"
+                android:layout_marginTop="20dp"/>
+
+            <ListView
+                android:id="@+id/guestsListView"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_marginTop="6dp"
+                android:background="#FFFFFF"
+                android:padding="4dp"
+                android:layout_marginBottom="24dp"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Bottom Navigation Bar -->
+    <include layout="@layout/layout_bottom_nav"/>
+
+</LinearLayout>

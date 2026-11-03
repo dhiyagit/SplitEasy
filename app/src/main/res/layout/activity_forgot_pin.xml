@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="24dp"
+    android:background="#F5F7FA">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reset PIN via Email OTP"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:textColor="#1A365D"/>
+
+    <TextView
+        android:id="@+id/infoTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Enter your registered email to receive a 6-digit verification OTP."
+        android:textSize="13sp"
+        android:textColor="#4A5568"
+        android:layout_marginTop="16dp"
+        android:gravity="center"/>
+
+    <EditText
+        android:id="@+id/identifierInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Registered Email Address"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:textColorHint="#4A5568"
+        android:inputType="textEmailAddress"
+        android:layout_marginTop="20dp"/>
+
+    <Button
+        android:id="@+id/requestOtpButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Send Email OTP"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp"/>
+
+    <EditText
+        android:id="@+id/otpInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter 6-Digit Email OTP"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:textColorHint="#4A5568"
+        android:inputType="number"
+        android:maxLength="6"
+        android:visibility="gone"
+        android:layout_marginTop="20dp"/>
+
+    <EditText
+        android:id="@+id/newPinInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="New 4-Digit PIN"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:textColorHint="#4A5568"
+        android:inputType="numberPassword"
+        android:maxLength="4"
+        android:visibility="gone"
+        android:layout_marginTop="12dp"/>
+
+    <Button
+        android:id="@+id/resetPinButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Verify OTP &amp; Reset PIN"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        android:layout_marginTop="20dp"/>
+
+</LinearLayout>

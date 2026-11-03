@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F5F7FA">
+
+    <ScrollView
+        android:id="@+id/mainScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true"
+        android:clipToPadding="false"
+        android:padding="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Group Management"
+                android:textSize="26sp"
+                android:textStyle="bold"
+                android:textColor="#1A365D"/>
+
+            <!-- Create New Group Section -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Create New Group"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp"
+                android:textColor="#2D3748"/>
+
+            <EditText
+                android:id="@+id/groupNameInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Group Name"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:textColorHint="#4A5568"
+                android:inputType="text"
+                android:layout_marginTop="8dp"/>
+
+            <Button
+                android:id="@+id/createGroupButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Create Group"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:layout_marginTop="8dp"/>
+
+            <!-- Select Existing Group to Manage -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Select Group to Manage"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginTop="24dp"
+                android:textColor="#2D3748"/>
+
+            <Spinner
+                android:id="@+id/manageGroupSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/rounded_spinner_bg"
+                android:paddingHorizontal="12dp"
+                android:layout_marginTop="8dp"/>
+
+            <!-- Set Birthday Date Section -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Set Your Birthday (YYYY-MM-DD)"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginTop="24dp"
+                android:textColor="#2D3748"/>
+
+            <EditText
+                android:id="@+id/birthdayInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="YYYY-MM-DD"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:textColorHint="#4A5568"
+                android:inputType="date"
+                android:layout_marginTop="8dp"/>
+
+            <Button
+                android:id="@+id/saveBirthdayButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Save Birthday"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:layout_marginTop="8dp"/>
+
+            <!-- Selected Group Details & Management Layout -->
+            <LinearLayout
+                android:id="@+id/groupManagementLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:layout_marginTop="16dp">
+
+                <TextView
+                    android:id="@+id/selectedGroupTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Manage Members"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="#1A365D"/>
+
+                <!-- Add Member -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="8dp">
+
+                    <EditText
+                        android:id="@+id/memberEmailInput"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="member@email.com"
+                        android:textSize="15sp"
+                        android:inputType="textEmailAddress"/>
+
+                    <Button
+                        android:id="@+id/addMemberButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Add"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:layout_marginStart="8dp"/>
+                </LinearLayout>
+
+                <!-- Members List -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Existing Members (Tap to Remove):"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="12dp"
+                    android:textColor="#4A5568"/>
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:layout_marginTop="4dp"
+                    android:background="#FFFFFF"
+                    android:padding="4dp">
+
+                    <LinearLayout
+                        android:id="@+id/membersContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"/>
+                </ScrollView>
+
+                <!-- Delete Group -->
+                <Button
+                    android:id="@+id/deleteGroupButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Delete Group"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:backgroundTint="#E53E3E"
+                    android:textColor="#FFFFFF"
+                    android:layout_marginTop="16dp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Bottom Navigation Bar -->
+    <include layout="@layout/layout_bottom_nav"/>
+
+</LinearLayout>
